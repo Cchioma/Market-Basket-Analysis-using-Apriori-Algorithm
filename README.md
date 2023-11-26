@@ -80,6 +80,8 @@ from mlxtend.frequent_patterns import apriori, association_rules
    # Display the chart
    plt.show()
    ```
+![](top_sold_items.png)
+
    
 
    
