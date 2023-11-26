@@ -16,7 +16,7 @@ The dataset is a CSV file that contains one table, consisting of 38765 rows and 
 5. Interpretation and Insights
 
 ## Data Transformation / Cleaning
-The dataset was loaded into jupyter notebook. Important libraries were also imported into jupyter notebook.
+1. I installed the pandas and MLXtend libraries into jupyter notebook.
 ```
 pip install mlxtend 
 pip install apyori
@@ -26,4 +26,11 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from mlxtend.frequent_patterns import apriori, association_rules
 ```
+
+2. I loaded the dataset and viewed the first 5 rows.
+
+   ```
+   groceries_data = pd.read_csv('groceries_dataset.csv')
+   groceries_data.head()
+   ```
 
