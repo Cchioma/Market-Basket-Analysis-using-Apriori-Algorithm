@@ -34,6 +34,11 @@ from mlxtend.frequent_patterns import apriori, association_rules
    groceries_data.head()
    ```
 
-
-![](groceries_head.PNG)
+3. I checked for null values
+   ```
+   groceries_data.isnull().sum().sort_values(ascending = False)
+   ```
+   There were no null values recorded
+   ![](is_null.PNG)
+   ![](groceries_head.PNG)
 
