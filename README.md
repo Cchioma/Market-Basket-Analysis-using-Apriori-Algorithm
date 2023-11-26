@@ -33,6 +33,7 @@ from mlxtend.frequent_patterns import apriori, association_rules
    groceries_data = pd.read_csv('groceries_dataset.csv')
    groceries_data.head()
    ```
+ 
  ![](groceries_head.PNG)
  
 3. I checked for null values
@@ -40,24 +41,27 @@ from mlxtend.frequent_patterns import apriori, association_rules
    groceries_data.isnull().sum().sort_values(ascending = False)
    ```
    There were no null values recorded
-   ![](is_null.PNG)
 
-4. I converted the data type of the Date column from object to date
+![](is_null.PNG)
+
+5. I converted the data type of the Date column from object to date
    ```
    groceries_data['date'] = pd.to_datetime(groceries_data['Date'])
    groceries_data.info()
    ```
-   ![](https://Market-Basket-Analysis-using-Apriori-Algorithm/blob/main/date_time.PNG)
 
-5. I checked for the distribution of items
+![](date_time.PNG)
+
+6. I checked for the distribution of items
    ```
    item_Distribution = groceries_data.groupby(by = 
    'itemDescription').size().reset_index(name = 'Frequency').sort_values(by  
    = 'Frequency', ascending = False)
    ```
-   ![](item_distribution.PNG)
 
-6. I created a bar chart showing the yop ten sold items
+![](item_distribution.PNG)
+
+7. I created a bar chart showing the yop ten sold items
    ```
    # Extracting data for the bar chart
    item_Distribution = groceries_data.groupby(by = 
@@ -80,6 +84,7 @@ from mlxtend.frequent_patterns import apriori, association_rules
    # Display the chart
    plt.show()
    ```
+
 ![](top_sold_items.png)
 
    
