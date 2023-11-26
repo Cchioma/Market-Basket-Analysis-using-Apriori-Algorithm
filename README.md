@@ -9,8 +9,8 @@ The dataset is a CSV file that contains one table, consisting of 38765 rows and 
 3. Determine which items are commonly bought together (association analysis).
 
 ## Skills/ Concepts Applied
-1.Data Preparation
-2.Exploratory Data Analysis (EDA)
-3.Market Basket Analysis
-4.Visualization
-5.Interpretation and Insights
+1. Data Preparation
+2. Exploratory Data Analysis (EDA)
+3. Market Basket Analysis
+4. Visualization
+5. Interpretation and Insights
