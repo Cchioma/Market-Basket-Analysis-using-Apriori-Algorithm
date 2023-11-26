@@ -34,5 +34,5 @@ from mlxtend.frequent_patterns import apriori, association_rules
    groceries_data.head()
    ```
 
-![](['groceries_head.PNG'](https://github.com/Cchioma/Market-Basket-Analysis-using-Apriori-Algorithm/blob/main/groceries_head.PNG)https://github.com/Cchioma/Market-Basket-Analysis-using-Apriori-Algorithm/blob/main/groceries_head.PNG)
+![]('groceries_head.PNG')
 
