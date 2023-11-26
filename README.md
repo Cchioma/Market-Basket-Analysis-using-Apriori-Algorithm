@@ -47,12 +47,41 @@ from mlxtend.frequent_patterns import apriori, association_rules
    groceries_data['date'] = pd.to_datetime(groceries_data['Date'])
    groceries_data.info()
    ```
+   ![](date_time.PNG)
+
 5. I checked for the distribution of items
    ```
    item_Distribution = groceries_data.groupby(by = 
    'itemDescription').size().reset_index(name = 'Frequency').sort_values(by  
    = 'Frequency', ascending = False)
    ```
+   ![](item_distribution.PNG)
+
+6. I created a bar chart showing the yop ten sold items
+   ```
+   # Extracting data for the bar chart
+   item_Distribution = groceries_data.groupby(by = 
+   'itemDescription').size().reset_index(name = 'Frequency').sort_values(by  
+   = 'Frequency', ascending = False).head(10)
+   bars = item_Distribution['itemDescription']
+   height = item_Distribution['Frequency']
+   x_pos = np.arange(len(bars))
+
+   # Plotting the bar chart
+   plt.figure(figsize = (16,9))
+   plt.bar(x_pos, height,color = (0.2, 0.3, 0.5, 0.5))
+
+   # Adding title and labels
+   plt.title('Top 10 sold items')
+   plt.xlabel('item names')
+   plt.ylabel('number of quantity sold')
+   plt.xticks(x_pos, bars)
+   
+   # Display the chart
+   plt.show()
+   ```
+   
+
    
    
    
