@@ -47,7 +47,7 @@ from mlxtend.frequent_patterns import apriori, association_rules
    groceries_data['date'] = pd.to_datetime(groceries_data['Date'])
    groceries_data.info()
    ```
-   ![](date_time.PNG)
+   ![](https://github.com/Cchioma/Market-Basket-Analysis-using-Apriori-Algorithm/blob/main/date_time.PNG)
 
 5. I checked for the distribution of items
    ```
