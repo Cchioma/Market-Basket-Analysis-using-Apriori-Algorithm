@@ -14,3 +14,16 @@ The dataset is a CSV file that contains one table, consisting of 38765 rows and 
 3. Market Basket Analysis
 4. Visualization
 5. Interpretation and Insights
+
+## Data Transformation / Cleaning
+The dataset was loaded into jupyter notebook. Important libraries were also imported into jupyter notebook.
+```
+pip install mlxtend 
+pip install apyori
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from mlxtend.frequent_patterns import apriori, association_rules
+```
+
