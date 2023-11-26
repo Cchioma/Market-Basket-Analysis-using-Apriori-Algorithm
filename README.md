@@ -33,12 +33,29 @@ from mlxtend.frequent_patterns import apriori, association_rules
    groceries_data = pd.read_csv('groceries_dataset.csv')
    groceries_data.head()
    ```
-
+ ![](groceries_head.PNG)
+ 
 3. I checked for null values
    ```
    groceries_data.isnull().sum().sort_values(ascending = False)
    ```
    There were no null values recorded
    ![](is_null.PNG)
-   ![](groceries_head.PNG)
+
+4. I converted the data type of the Date column from object to date
+   ```
+   groceries_data['date'] = pd.to_datetime(groceries_data['Date'])
+   groceries_data.info()
+   ```
+5. I checked for the distribution of items
+   ```
+   item_Distribution = groceries_data.groupby(by = 
+   'itemDescription').size().reset_index(name = 'Frequency').sort_values(by  
+   = 'Frequency', ascending = False)
+   ```
+   
+   
+   
+
+   
 
