@@ -33,4 +33,5 @@ from mlxtend.frequent_patterns import apriori, association_rules
    groceries_data = pd.read_csv('groceries_dataset.csv')
    groceries_data.head()
    ```
+   ![](groceries_head.PNG)
 
