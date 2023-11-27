@@ -64,7 +64,7 @@ from mlxtend.frequent_patterns import apriori, association_rules
 
 ![](item_distribution.PNG)
 
-2. I created a bar chart showing the yop ten sold items
+2. I created a bar chart showing the top ten sold items. "Whole milk" was the highest selling product followed by "other vegetables" and rolls/buns
    ```
    # Extracting data for the bar chart
    item_Distribution = groceries_data.groupby(by = 
@@ -88,6 +88,42 @@ from mlxtend.frequent_patterns import apriori, association_rules
    plt.show()
    ```
 ![](top_sold_items.png)
+
+3. I created new columns for month and year, then grouped items sold by year and month. I then created a line chart showing purchases over different month and years.
+```
+
+# Assuming 'groceries_data' is your DataFrame with 'Date' column
+# Ensure 'Date' is in datetime format
+groceries_data['Date'] = pd.to_datetime(groceries_data['Date'])
+
+# Create new columns for Month and Year
+months_order = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+groceries_data['Month'] = pd.Categorical(groceries_data['Date'].dt.strftime('%B'), categories=months_order, ordered=True)
+groceries_data['Year'] = groceries_data['Date'].dt.year
+
+# Group by Year and Month, and count the number of purchases
+purchase_distribution = groceries_data.groupby(['Year', 'Month']).size().reset_index(name='Number_of_Purchases')
+
+# Create a line chart with a separate line for each year
+plt.figure(figsize=(12, 6))
+
+for year in purchase_distribution['Year'].unique():
+    year_data = purchase_distribution[purchase_distribution['Year'] == year]
+    plt.plot(year_data['Month'], year_data['Number_of_Purchases'], label=str(year), marker='o', linestyle='-')
+
+# Add labels and title
+plt.xlabel('Month')
+plt.ylabel('Number of Purchases')
+plt.title('Distribution of Purchases Over Different Months')
+plt.legend(title='Year', loc='upper right')
+
+# Show the plot
+plt.show()
+```
+
+![](purch_over_months.png)
+
+
 
    
 
