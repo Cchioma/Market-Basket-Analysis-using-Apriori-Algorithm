@@ -34,7 +34,7 @@ from mlxtend.frequent_patterns import apriori, association_rules
    groceries_data.head()
    ```
  
- ![](groceries_head.PNG).
+ ![](groceries_head.PNG)
  
 3. I checked for null values
    ```
@@ -85,7 +85,7 @@ from mlxtend.frequent_patterns import apriori, association_rules
    plt.show()
    ```
 
-![](top_sold_items.png).
+![]([top_sold_items.png](https://github.com/Cchioma/Market-Basket-Analysis-using-Apriori-Algorithm/blob/main/cust_level.PNG)https://github.com/Cchioma/Market-Basket-Analysis-using-Apriori-Algorithm/blob/main/cust_level.PNG).
 
    
 
