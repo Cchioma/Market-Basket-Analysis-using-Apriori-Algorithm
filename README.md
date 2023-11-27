@@ -1,6 +1,7 @@
 # Market Basket Analysis 
 ![](date_time.PNG)
-![](groceries_head.PNG)
+![](https://github.com/Cchioma/Market-Basket-Analysis-using-Apriori-Algorithm/blob/main/date_time.PNG)
+
  
 ## Background
 Market Basket Analysis (MBA), also known as association analysis or affinity analysis, is a data mining technique used in the field of retail and e-commerce to discover associations between products that are frequently purchased together. The analysis is based on the concept of a "market basket," which refers to a collection of items that a customer buys during a single shopping trip.
