@@ -1,7 +1,4 @@
 # Market Basket Analysis 
-![](date_time.PNG)
-![](https://github.com/Cchioma/Market-Basket-Analysis-using-Apriori-Algorithm/blob/main/date_time.PNG)
-
  
 ## Background
 Market Basket Analysis (MBA), also known as association analysis or affinity analysis, is a data mining technique used in the field of retail and e-commerce to discover associations between products that are frequently purchased together. The analysis is based on the concept of a "market basket," which refers to a collection of items that a customer buys during a single shopping trip.
@@ -46,7 +43,7 @@ from mlxtend.frequent_patterns import apriori, association_rules
    ```
    There were no null values recorded
 
-![](is_null.PNG).
+![](is_null.PNG)
 
 5. I converted the data type of the Date column from object to date
    ```
@@ -54,7 +51,7 @@ from mlxtend.frequent_patterns import apriori, association_rules
    groceries_data.info()
    ```
 
-![](date_time.PNG).
+![](date_time.PNG)
 
 ## Insights and Visualization
 
@@ -65,7 +62,7 @@ from mlxtend.frequent_patterns import apriori, association_rules
    = 'Frequency', ascending = False)
    ```
 
-![](item_distribution.PNG).
+![](item_distribution.PNG)
 
 2. I created a bar chart showing the yop ten sold items
    ```
@@ -90,11 +87,7 @@ from mlxtend.frequent_patterns import apriori, association_rules
    # Display the chart
    plt.show()
    ```
-![](https://github.com/Cchioma/Market-Basket-Analysis-using-Apriori-Algorithm/cust_level.PNG)
-
-
-
-![](https://github.com/Cchioma/Market-Basket-Analysis-using-Apriori-Algorithm/blob/main/cust_level.PNG).
+![](top_sold_items.png)
 
    
 
