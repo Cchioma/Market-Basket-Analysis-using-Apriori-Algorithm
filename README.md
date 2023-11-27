@@ -87,7 +87,7 @@ from mlxtend.frequent_patterns import apriori, association_rules
    plt.show()
    ```
 
-![](top_sold_items.png](https://github.com/Cchioma/Market-Basket-Analysis-using-Apriori-Algorithm/blob/main/cust_level.PNG).
+![](https://github.com/Cchioma/Market-Basket-Analysis-using-Apriori-Algorithm/blob/main/cust_level.PNG).
 
    
 
