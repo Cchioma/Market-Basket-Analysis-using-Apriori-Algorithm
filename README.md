@@ -34,7 +34,7 @@ from mlxtend.frequent_patterns import apriori, association_rules
    groceries_data.head()
    ```
  
- ![](groceries_head.PNG)
+ ![](groceries_head.PNG).
  
 3. I checked for null values
    ```
@@ -42,7 +42,7 @@ from mlxtend.frequent_patterns import apriori, association_rules
    ```
    There were no null values recorded
 
-![](is_null.PNG)
+![](is_null.PNG).
 
 5. I converted the data type of the Date column from object to date
    ```
@@ -50,7 +50,7 @@ from mlxtend.frequent_patterns import apriori, association_rules
    groceries_data.info()
    ```
 
-![](date_time.PNG)
+![](date_time.PNG).
 
 6. I checked for the distribution of items
    ```
@@ -59,7 +59,7 @@ from mlxtend.frequent_patterns import apriori, association_rules
    = 'Frequency', ascending = False)
    ```
 
-![](item_distribution.PNG)
+![](item_distribution.PNG).
 
 7. I created a bar chart showing the yop ten sold items
    ```
@@ -85,7 +85,7 @@ from mlxtend.frequent_patterns import apriori, association_rules
    plt.show()
    ```
 
-![](top_sold_items.png)
+![](top_sold_items.png).
 
    
 
