@@ -123,6 +123,46 @@ plt.show()
 
 ![](purch_over_months.png)
 
+In 2014, the lowest purchases were recorded while May recorded the highest purchase. In 2015, February recorded the lowest purchase while August recorded the highest purchase.
+
+
+4. I selected 'Member_number' and 'itemDescription' columns from the DataFrame and sorting by 'Member_number' column in descending order. Then i stripped leading and trailing whitespaces from the 'itemDescription' column and displayed the result.
+   
+```
+#Select 'Member_number' and 'itemDescription' columns from the DataFrame and sort by 'Member_number' column in descending order.
+cust_level = groceries_data[['Member_number', 'itemDescription']].sort_values(by = 'Member_number', ascending =False)
+
+#Srip leading and trailing whitespaces from the 'itemDescription' column and display the result
+cust_level['itemDescription'] = cust_level['itemDescription'].str.strip()
+cust_level
+```
+![](cust_level.PNG)
+
+5. I Extracted the 'itemDescription' column and converted it to a list
+
+```
+# Extracting the 'itemDescription' column for each group and converting it to a list
+transactions = [a[1]['itemDescription'].tolist() for a in list(cust_level.groupby(['Member_number']))]
+```
+6. I imported the apriori function from the apyori library
+
+```
+from apyori import apriori
+```
+I then defined the association rules using the apriori algorithm as follows:
+ i.   Transactions: The list of transactions to analyze (lists of item sets for each Member_number)
+ ii.  Min_support: Minimum support threshold for an item set to be considered frequent
+ iii. Min_confidence: Minimum confidence threshold for generating association rules
+ iv.  Min_lift: Minimum lift threshold for generating association rules
+ v.   Min_length: Minimum number of items in an item set to be considered for generating rules
+ 
+```
+rules = apriori(transactions=transactions, min_support=0.002, min_confidence=0.05, min_lift=3, min_length=2)
+```
+
+
+
+
 
 
    
