@@ -86,7 +86,7 @@ from mlxtend.frequent_patterns import apriori, association_rules
    # Display the chart
    plt.show()
    ```
-![Image](https://github.com/Cchioma/Market-Basket-Analysis-using-Apriori-Algorithm/raw/main/cust_level.PNG)
+![](https://github.com/Cchioma/Market-Basket-Analysis-using-Apriori-Algorithm/cust_level.PNG)
 
 
 
