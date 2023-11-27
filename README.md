@@ -150,11 +150,11 @@ transactions = [a[1]['itemDescription'].tolist() for a in list(cust_level.groupb
 from apyori import apriori
 ```
 I then defined the association rules using the apriori algorithm as follows:
- i.   Transactions: The list of transactions to analyze (lists of item sets for each Member_number)
- ii.  Min_support: Minimum support threshold for an item set to be considered frequent
- iii. Min_confidence: Minimum confidence threshold for generating association rules
- iv.  Min_lift: Minimum lift threshold for generating association rules
- v.   Min_length: Minimum number of items in an item set to be considered for generating rules
+  i.   Transactions: The list of transactions to analyze (lists of item sets for each Member_number)
+  ii.  Min_support: Minimum support threshold for an item set to be considered frequent
+  iii. Min_confidence: Minimum confidence threshold for generating association rules
+  iv.  Min_lift: Minimum lift threshold for generating association rules
+  v.   Min_length: Minimum number of items in an item set to be considered for generating rules
  
 ```
 rules = apriori(transactions=transactions, min_support=0.002, min_confidence=0.05, min_lift=3, min_length=2)
