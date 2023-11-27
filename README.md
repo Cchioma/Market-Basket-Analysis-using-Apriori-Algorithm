@@ -190,6 +190,8 @@ def inspect(results):
     # Returning a list of tuples containing the extracted information
     return list(zip(lhs, rhs, supports, confidences, lifts))
 
+```
+
 I applied the 'inspect' function to the 'results' and converted the result into a DataFrame. The variable 'resultsindataframe' now contains a DataFrame with information about the association rules.
 
 ```
