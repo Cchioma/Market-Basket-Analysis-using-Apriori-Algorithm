@@ -158,8 +158,43 @@ I then defined the association rules using the apriori algorithm as follows:
  
 ```
 rules = apriori(transactions=transactions, min_support=0.002, min_confidence=0.05, min_lift=3, min_length=2)
-results  = list(rules)
+
+```
+I Converted the generated association rules into a list for further analysis and inspection.
+The variable 'results' now contains a list of association rules based on the specified parameters.
+
+```
+results = list(rules)
 results
+```
+
+7. I defined a function named 'inspect' that takes 'results' as input
+
+```
+def inspect(results):
+    # Extracting the left-hand side of each association rule
+    lhs = [tuple(result[2][0][0])[0] for result in results]
+
+    # Extracting the right-hand side of each association rule
+    rhs = [tuple(result[2][0][1])[0] for result in results]
+
+    # Extracting the support values of each association rule
+    supports = [result[1] for result in results]
+
+    # Extracting the confidence values of each association rule
+    confidences = [result[2][0][2] for result in results]
+
+    # Extracting the lift values of each association rule
+    lifts = [result[2][0][3] for result in results]
+
+    # Returning a list of tuples containing the extracted information
+    return list(zip(lhs, rhs, supports, confidences, lifts))
+
+I applied the 'inspect' function to the 'results' and converted the result into a DataFrame. The variable 'resultsindataframe' now contains a DataFrame with information about the association rules.
+
+```
+resultsindataframe = pd.DataFrame(inspect(results), columns=['Left hand side', 'Right hand side', 'Supports', 'Confidences', 'Lift'])
+
 ```
 
 
