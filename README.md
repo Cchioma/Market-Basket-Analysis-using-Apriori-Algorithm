@@ -158,7 +158,11 @@ I then defined the association rules using the apriori algorithm as follows:
  
 ```
 rules = apriori(transactions=transactions, min_support=0.002, min_confidence=0.05, min_lift=3, min_length=2)
+results  = list(rules)
+results
 ```
+
+
 
 
 
