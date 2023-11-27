@@ -198,6 +198,22 @@ I applied the 'inspect' function to the 'results' and converted the result into 
 resultsindataframe = pd.DataFrame(inspect(results), columns=['Left hand side', 'Right hand side', 'Supports', 'Confidences', 'Lift'])
 
 ```
+8. I Converted the 'Lift' column in the 'resultsindataframe' DataFrame to numeric type
+
+```
+resultsindataframe['Lift'] = pd.to_numeric(resultsindataframe['Lift'])
+
+```
+
+I selected the top 10 rows with the largest 'Lift' values in the DataFrame. I used 'nlargest' to retrieve the rows with the highest values in the specified column. The variable 'top_lifts' now contains the top 10 association rules with the highest 'Lift' values.
+
+```
+top_lifts = resultsindataframe.nlargest(n=10, columns='Lift')
+```
+
+![](lift.PNG)
+
+
 
 
 
