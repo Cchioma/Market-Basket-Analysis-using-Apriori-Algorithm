@@ -52,7 +52,9 @@ from mlxtend.frequent_patterns import apriori, association_rules
 
 ![](date_time.PNG).
 
-6. I checked for the distribution of items
+## Insights and Visualization
+
+1. I checked for the distribution of items
    ```
    item_Distribution = groceries_data.groupby(by = 
    'itemDescription').size().reset_index(name = 'Frequency').sort_values(by  
@@ -61,7 +63,7 @@ from mlxtend.frequent_patterns import apriori, association_rules
 
 ![](item_distribution.PNG).
 
-7. I created a bar chart showing the yop ten sold items
+2. I created a bar chart showing the yop ten sold items
    ```
    # Extracting data for the bar chart
    item_Distribution = groceries_data.groupby(by = 
@@ -85,7 +87,7 @@ from mlxtend.frequent_patterns import apriori, association_rules
    plt.show()
    ```
 
-![]([top_sold_items.png](https://github.com/Cchioma/Market-Basket-Analysis-using-Apriori-Algorithm/blob/main/cust_level.PNG)https://github.com/Cchioma/Market-Basket-Analysis-using-Apriori-Algorithm/blob/main/cust_level.PNG).
+![](top_sold_items.png](https://github.com/Cchioma/Market-Basket-Analysis-using-Apriori-Algorithm/blob/main/cust_level.PNG).
 
    
 
