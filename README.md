@@ -65,8 +65,7 @@ from mlxtend.frequent_patterns import apriori, association_rules
 ![](item_distribution.PNG)
 
 2. I created a bar chart showing the top ten sold items.
-   Insight: The distribution of item purchases reveals that "Whole milk" is the top-selling 
-   product, followed by "other vegetables" and "rolls/buns".
+   
    ```
    # Extracting data for the bar chart
    item_Distribution = groceries_data.groupby(by = 
@@ -90,6 +89,9 @@ from mlxtend.frequent_patterns import apriori, association_rules
    plt.show()
    ```
 ![](top_sold_items.png)
+
+Insight: The distribution of item purchases reveals that "Whole milk" is the top-selling 
+product, followed by "other vegetables" and "rolls/buns".
 
 3. I created new columns for month and year, then grouped items sold by year and month. I then created a line chart showing purchases over different month and years.
 ```
@@ -218,8 +220,7 @@ top_lifts = resultsindataframe.nlargest(n=10, columns='Lift')
 Insight: The association analysis identifies item pairs frequently purchased together, as indicated by high lift values. The top 10 association rules with the highest lift values indicate strong relationships between certain items.
 
 ## Recomendations
-1. Arrange high-selling items strategically within the store to maximize visibility.
-Consider placing frequently associated items near each other to encourage complementary purchases.
+1. Arrange high-selling items strategically within the store to maximize visibility. Consider placing frequently associated items near each other to encourage complementary purchases.
 2. Plan promotions and marketing campaigns around peak purchasing months, such as May and August.
 Tailor promotions to align with changing consumer behaviors throughout the year.
 3. Leverage customer-level analysis for personalized marketing efforts.
