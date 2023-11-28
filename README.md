@@ -215,7 +215,7 @@ I selected the top 10 rows with the largest 'Lift' values in the DataFrame. I us
 top_lifts = resultsindataframe.nlargest(n=10, columns='Lift')
 ```
 
-![](lift.PNG)
+![](resulta.PNG)
 
 Insight: The association analysis identifies item pairs frequently purchased together, as indicated by high lift values. The top 10 association rules with the highest lift values indicate strong relationships between certain items.
 
