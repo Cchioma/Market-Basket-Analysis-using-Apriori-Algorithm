@@ -64,7 +64,9 @@ from mlxtend.frequent_patterns import apriori, association_rules
 
 ![](item_distribution.PNG)
 
-2. I created a bar chart showing the top ten sold items. "Whole milk" was the highest selling product followed by "other vegetables" and rolls/buns
+2. I created a bar chart showing the top ten sold items.
+   Insight: The distribution of item purchases reveals that "Whole milk" is the top-selling 
+   product, followed by "other vegetables" and "rolls/buns".
    ```
    # Extracting data for the bar chart
    item_Distribution = groceries_data.groupby(by = 
@@ -123,7 +125,7 @@ plt.show()
 
 ![](purch_over_months.png)
 
-In 2014, the lowest purchases were recorded while May recorded the highest purchase. In 2015, February recorded the lowest purchase while August recorded the highest purchase.
+Insight: The line chart depicting purchases over different months and years shows variations in consumer behavior. May 2014 and August 2015 recorded the highest purchases.
 
 
 4. I selected 'Member_number' and 'itemDescription' columns from the DataFrame and sorting by 'Member_number' column in descending order. Then i stripped leading and trailing whitespaces from the 'itemDescription' column and displayed the result.
@@ -212,6 +214,28 @@ top_lifts = resultsindataframe.nlargest(n=10, columns='Lift')
 ```
 
 ![](lift.PNG)
+
+Insight: The association analysis identifies item pairs frequently purchased together, as indicated by high lift values. The top 10 association rules with the highest lift values indicate strong relationships between certain items.
+
+## Recomendations
+1. Arrange high-selling items strategically within the store to maximize visibility.
+Consider placing frequently associated items near each other to encourage complementary purchases.
+2. Plan promotions and marketing campaigns around peak purchasing months, such as May and August.
+Tailor promotions to align with changing consumer behaviors throughout the year.
+3. Leverage customer-level analysis for personalized marketing efforts.
+Send targeted promotions or recommendations based on individual customer preferences.
+4. Create bundled promotions for items frequently purchased together.
+Implement cross-selling strategies based on the identified association rules to enhance the customer shopping experience.
+5. Regularly update the market basket analysis to adapt to changing consumer trends.
+Stay agile in adjusting marketing strategies based on evolving customer preferences.
+Implementing these recommendations can enhance the overall shopping experience, increase customer satisfaction, and potentially boost sales in the retail or e-commerce business.
+
+
+
+
+
+
+
 
 
 
